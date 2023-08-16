@@ -35,8 +35,7 @@ function Grid({ coin, delay, isWatchlistPage}) {
                     onClick={(e) => {
                     e.preventDefault();
                     if (added) {
-                        removeFromWatchlist(coin.id);
-                        setAdded(false);
+                        setAdded(removeFromWatchlist(coin.id));
                     } else {
                         addToWatchlist(coin.id);
                         setAdded(true);

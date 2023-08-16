@@ -96,9 +96,8 @@ function List({coin, delay, isWatchlistPage}) {
                     <IconButton
                         onClick={(e) => {
                         e.preventDefault();
-                        if (added) {
-                            removeFromWatchlist(coin.id);
-                            setAdded(false);
+                        if (added) { 
+                            setAdded(removeFromWatchlist(coin.id));
                         } else {
                             addToWatchlist(coin.id);
                             setAdded(true);
